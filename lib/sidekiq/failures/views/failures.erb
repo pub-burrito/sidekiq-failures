@@ -44,6 +44,10 @@
       </tr>
     <% end %>
   </table>
+  <form action="<%= root_path %>failures/remove" method="post">
+    <input class="btn btn-danger btn-small pull-left" type="submit" name="delete" value="Clear All" />
+    <input type="checkbox" name="counter" value="true"/> reset failed counter
+  </form>
 <% else %>
   <div class="alert alert-success">No failed jobs found.</div>
 <% end %>
